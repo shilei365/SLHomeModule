@@ -32,6 +32,8 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'SLHomeModule/Classes/**/*'
   
+  s.swift_version = '4.1'
+  
   # s.resource_bundles = {
   #   'SLHomeModule' => ['SLHomeModule/Assets/*.png']
   # }
