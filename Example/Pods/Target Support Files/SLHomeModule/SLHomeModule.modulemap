@@ -1,0 +1,6 @@
+framework module SLHomeModule {
+  umbrella header "SLHomeModule-umbrella.h"
+
+  export *
+  module * { export * }
+}

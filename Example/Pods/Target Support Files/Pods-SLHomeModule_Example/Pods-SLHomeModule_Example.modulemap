@@ -1,0 +1,6 @@
+framework module Pods_SLHomeModule_Example {
+  umbrella header "Pods-SLHomeModule_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
