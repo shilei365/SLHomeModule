@@ -7,11 +7,18 @@
 //
 
 import UIKit
+import SLHomeModule
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let label = EdgeInsetLabel()
+        label.leftTextInset = 16
+        
+        let shadowView = UIView()
+        shadowView.addCustomShadow()
+        shadowView.addCustomGradient()
     }
 
     override func didReceiveMemoryWarning() {
