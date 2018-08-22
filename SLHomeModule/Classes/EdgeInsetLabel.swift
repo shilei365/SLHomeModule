@@ -9,12 +9,12 @@
 import Foundation
 
 @IBDesignable
-class EdgeInsetLabel: UILabel {
+public class EdgeInsetLabel: UILabel {
     var textInsets = UIEdgeInsets.zero {
         didSet { invalidateIntrinsicContentSize() }
     }
     
-    override func textRect(forBounds bounds: CGRect, limitedToNumberOfLines numberOfLines: Int) -> CGRect {
+    override public func textRect(forBounds bounds: CGRect, limitedToNumberOfLines numberOfLines: Int) -> CGRect {
         let insetRect = UIEdgeInsetsInsetRect(bounds, textInsets)
         let textRect = super.textRect(forBounds: insetRect, limitedToNumberOfLines: numberOfLines)
         let invertedInsets = UIEdgeInsets(top: -textInsets.top,
@@ -24,13 +24,13 @@ class EdgeInsetLabel: UILabel {
         return UIEdgeInsetsInsetRect(textRect, invertedInsets)
     }
     
-    override func drawText(in rect: CGRect) {
+    override public func drawText(in rect: CGRect) {
         super.drawText(in: UIEdgeInsetsInsetRect(rect, textInsets))
         
     }
 }
 
-extension EdgeInsetLabel {
+public extension EdgeInsetLabel {
     @IBInspectable
     var leftTextInset: CGFloat {
         set { textInsets.left = newValue }

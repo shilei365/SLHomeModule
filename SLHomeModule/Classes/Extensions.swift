@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension UIView {
+public extension UIView {
     
     func addCustomGradient() {
         addGradient(startColor: UIColor.white, endColor: UIColor(red: 0.58, green: 0.79, blue: 0.85, alpha: 1.0))
